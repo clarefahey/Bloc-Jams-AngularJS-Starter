@@ -17,7 +17,7 @@
          ]
      };
 
-     var albumMarconi = {
+      var albumMarconi = {
          title: 'The Telephone',
          artist: 'Guglielmo Marconi',
          label: 'EM',
@@ -33,19 +33,20 @@
      };
 
      Fixtures.getAlbum = function() {
-      return albumPicasso;
-  };
-
-     Fixtures.getCollection = function (numberOfAlbums) {
-       var arr = [];
-       while (arr.length < numberOfAlbums) {
-         arr.push(albumPicasso);
-       }
-       return arr;
+         return albumPicasso;
      };
 
-        return Fixtures;
-    }
+     Fixtures.getCollection = function (numberOfAlbums) {
+       this.albums = [];
+       for (var i = 0; i < numberOfAlbums; i++) {
+         this.albums.push(angular.copy(albumPicasso));
+       }
+
+       return this.albums;
+
+       }
+       return Fixtures;
+     }
 
     angular
         .module('blocJams')

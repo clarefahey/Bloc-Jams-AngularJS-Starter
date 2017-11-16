@@ -17,7 +17,7 @@
          ]
      };
 
-      var albumMarconi = {
+     var albumMarconi = {
          title: 'The Telephone',
          artist: 'Guglielmo Marconi',
          label: 'EM',
@@ -33,8 +33,8 @@
      };
 
      Fixtures.getAlbum = function() {
-         return albumPicasso;
-     };
+      return albumPicasso;
+  };
 
      Fixtures.getCollection = function (numberOfAlbums) {
        var arr = [];

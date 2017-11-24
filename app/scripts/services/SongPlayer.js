@@ -60,6 +60,13 @@
       SongPlayer.currentTime = null;
 
 /**
+@desc current volume
+@type {Number}
+*/
+
+      SongPlayer.volume = null;
+
+/**
 * @function playSong
 *@desc Plays song using the buzz library play method
 *@param {Object} song
@@ -160,7 +167,17 @@
     }
   };
 
+/**
+*@function setVolume
+*@desc sets current volume
+*@param {Number}
+*/
 
+    SongPlayer.setVolume = function(volume) {
+      if (currentBuzzObject){
+        currentBuzzObject.setVolume(volume);
+      }
+    };
           return SongPlayer;
      }
 
